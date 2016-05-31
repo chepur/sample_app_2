@@ -1,5 +1,8 @@
-# Перевод Ruby on Rails Tutorial: пример приложения
+# My Ruby on Rails App
 
-Это пример приложения для
-[*Ruby on Rails Tutorial*](http://railstutorial.org/)
-by [Майкл Хартл](http://michaelhartl.com/).
+# Push to heroku:
+git push
+git push heroku
+heroku run rake db:migrate
+
+heroku logs
