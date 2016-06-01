@@ -4,6 +4,7 @@ class OrdersController < ApplicationController
   end
 
   def create
+    render plain: params[:order].to_s.plain
   end
 
   def new
