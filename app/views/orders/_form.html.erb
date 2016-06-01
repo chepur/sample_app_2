@@ -1,24 +1,35 @@
 <%= form_for :order, url: orders_path, :html => {class: "form-horizontal", role: "form"} do |f| %>
     <div class="container-fluid">
       <div class="form-group">
-        <%= f.label :name, class: "control-label" %>
-        <!--<div class="col-xs-4">-->
-        <div>
-          <%= f.text_field :name, class: "form-control", placeholder: 'Name', autofocus: true %>
+        <%= f.label :surname, "Surname:", class: "col-sm-2 control-label" %>
+        <div class="col-sm-10">
+          <%= f.text_field :surname, class: "form-control", placeholder: 'Surname', autofocus: true %>
         </div>
       </div>
 
       <div class="form-group">
-        <%= f.label :description, class: "control-label" %>
-        <!--<div class="col-xs-4">-->
-        <div>
-          <%= f.text_area :description, class: "form-control", placeholder: 'Description' %>
+        <%= f.label :name, "Name:", class: "col-sm-2 control-label" %>
+        <div class="col-sm-10">
+          <%= f.text_field :surname, class: "form-control", placeholder: 'Name' %>
         </div>
       </div>
 
       <div class="form-group">
-        <div>
-          <!--class="col-sm-offset-4 col-sm-10"-->
+        <%= f.label :teudat, "Teudat zehut:", class: "col-sm-2 control-label" %>
+        <div class="col-sm-10">
+          <%= f.text_field :teudat, class: "form-control", placeholder: 'Teudat zehut' %>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :phone, "Conptact phone:", class: "col-sm-2 control-label" %>
+        <div class="col-sm-10">
+          <%= f.text_field :phone, class: "form-control", placeholder: 'Conptact phone' %>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-10 col-sm-offset-2">
           <%= f.submit class: "btn btn-primary" %>
         </div>
       </div>
