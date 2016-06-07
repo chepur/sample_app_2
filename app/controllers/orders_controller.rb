@@ -1,10 +1,13 @@
 class OrdersController < ApplicationController
 
   def index
+    @orders = Order.all
   end
 
   def create
-    render plain: params[:order].to_s.plain
+    @order = Order.create(order_params)
+
+    redirect_to order_path(@order)
   end
 
   def new
@@ -14,12 +17,19 @@ class OrdersController < ApplicationController
   end
 
   def show
+    @order = Order.find(params[:id])
   end
 
   def update
   end
 
   def destroy
+  end
+
+  private
+
+  def order_params
+    params.require(:order).permit( :name, :surname, :tz, :phone)
   end
 
 end
