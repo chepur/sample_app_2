@@ -1,19 +1,34 @@
-<p>
-  <strong>Name:</strong>
-  <%= @order.name %>
-</p>
+<h1>Order show page</h1>
 
-<p>
-  <strong>Surname:</strong>
-  <%= @order.surname %>
-</p>
+<div class="container-fluid">
+  <table class="table table-bordered table-striped">
+    <caption>Order id:<%= @order.id %> created at: <%= @order.created_at.strftime("%Y-%m-%d %H:%M") %> Operator: "Some Name"</caption>
+    <tbody>
+    <tr>
+      <td ><strong>Name:</strong></td>
+      <td ><%= @order.name %></td>
+    </tr>
 
-<p>
-  <strong>Teudat zehud:</strong>
-  <%= @order.tz %>
-</p>
+    <tr>
+      <td class="col-sm-1"><strong>Surname:</strong></td>
+      <td class="col-sm-3"><%= @order.surname %></td>
+    </tr>
 
-<p>
-  <strong>Phone:</strong>
-  <%= @order.phone %>
-</p>
+    <tr>
+      <td class="col-sm-1"><strong>Teudat zehud:</strong></td>
+      <td class="col-sm-3"><%= @order.tz %></td>
+    </tr>
+
+    <tr>
+      <td class="col-sm-1"><strong>Phone:</strong></td>
+      <td class="col-sm-3"><%= @order.phone %></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="col-sm-10 ">
+  <p><%= link_to '< Back to orders', orders_path, class: "btn btn-link", role: "button" %></p>
+</div>
+</div>
+
