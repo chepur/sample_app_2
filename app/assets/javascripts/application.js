@@ -16,3 +16,10 @@
 //= require bootstrap-sprockets
 //= require_tree .
 
+
+// hide flash message function:
+$(document).on('ready page:load', function () {
+    $(".alert" ).fadeOut(3000);
+    $(".alert-success" ).fadeOut(3000);
+    $(".alert-danger" ).fadeOut(3000);
+});

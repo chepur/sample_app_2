@@ -4,15 +4,8 @@ class OrdersController < ApplicationController
     @orders = Order.all
   end
 
-  def create
-    @order = Order.new(order_params)
-
-    if @order.save
-      redirect_to order_path(@order)
-    else
-      render 'new'
-    end
-
+  def show
+    @order = Order.find(params[:id])
   end
 
   def new
@@ -23,14 +16,34 @@ class OrdersController < ApplicationController
     @order = Order.find(params[:id])
   end
 
-  def show
-    @order = Order.find(params[:id])
+  def create
+    @order = Order.new(order_params)
+
+    if @order.save
+      flash[:success] = "Order was created!"
+      redirect_to order_path(@order)
+    else
+      render 'new'
+    end
   end
 
   def update
+    @order = Order.find(params[:id])
+
+    if @order.update(order_params)
+      redirect_to order_path(@order)
+      flash[:success] = "Order was updated!"
+    else
+      render 'edit'
+    end
   end
 
   def destroy
+    @order = Order.find(params[:id])
+    @order.destroy
+
+    redirect_to orders_path
+    flash[:danger] = "Order was deleted!"
   end
 
   private

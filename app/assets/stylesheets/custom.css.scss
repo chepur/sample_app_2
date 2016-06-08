@@ -38,8 +38,12 @@ textarea {
   margin-right: auto;
   margin-left: auto;
   max-width: 900px;
-  overflow:hidden;
-  min-height:0px !important;
+  overflow: hidden;
+  min-height: 0px !important;
+}
+
+.orders-table {
+  cursor: pointer;
 }
 
 /* typography */
@@ -102,40 +106,40 @@ p {
   margin-top: 80px;
 }
 
-.footer-distributed .footer-left p{
-  color:  #8f9296;
+.footer-distributed .footer-left p {
+  color: #8f9296;
   font-size: 14px;
   margin: 0;
 }
 
 /* Footer links */
 
-.footer-distributed p.footer-links{
-  font-size:18px;
+.footer-distributed p.footer-links {
+  font-size: 18px;
   font-weight: bold;
-  color:  #ffffff;
+  color: #ffffff;
   margin: 0 0 10px;
   padding: 0;
 }
 
-.footer-distributed p.footer-links a{
-  display:inline-block;
+.footer-distributed p.footer-links a {
+  display: inline-block;
   line-height: 1.8;
   text-decoration: none;
-  color:  inherit;
+  color: inherit;
 }
 
-.footer-distributed .footer-right{
+.footer-distributed .footer-right {
   float: right;
   margin-top: 6px;
   max-width: 180px;
 }
 
-.footer-distributed .footer-right a{
+.footer-distributed .footer-right a {
   display: inline-block;
   width: 35px;
   height: 35px;
-  background-color:  #33383b;
+  background-color: #33383b;
   border-radius: 2px;
 
   font-size: 20px;

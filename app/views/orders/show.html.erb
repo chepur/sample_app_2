@@ -2,11 +2,13 @@
 
 <div class="container-fluid">
   <table class="table table-bordered table-striped">
-    <caption>Order id:<%= @order.id %> created at: <%= @order.created_at.strftime("%Y-%m-%d %H:%M") %> Operator: "Some Name"</caption>
+    <caption>Order id:<%= @order.id %> created at: <%= @order.created_at.strftime("%Y-%m-%d %H:%M") %> Operator: "Some
+      Name"
+    </caption>
     <tbody>
     <tr>
-      <td ><strong>Name:</strong></td>
-      <td ><%= @order.name %></td>
+      <td><strong>Name:</strong></td>
+      <td><%= @order.name %></td>
     </tr>
 
     <tr>
@@ -25,10 +27,24 @@
     </tr>
     </tbody>
   </table>
+
+  <div class="row">
+    <div class="col-md-12 ">
+      <p>
+        <%= link_to 'Edit', edit_order_path, class: "btn btn-primary", role: "button" %>
+        <%= link_to 'Delete', order_path(@order), method: :delete,
+                    data: {confirm: 'Are you sure?'}, class: "btn btn-danger", role: "button" %>
+      </p>
+    </div>
+    <div class="col-md-2 ">
+      <p><%= link_to '< Back to orders', orders_path, class: "btn btn-link", role: "button" %></p>
+    </div>
+  </div>
 </div>
 
-<div class="col-sm-10 ">
-  <p><%= link_to '< Back to orders', orders_path, class: "btn btn-link", role: "button" %></p>
-</div>
-</div>
+
+
+
+
+
 

@@ -1,10 +1,10 @@
-<%= bootstrap_form_for(@order, label_errors: true, :html => {class: "form-horizontal", role: "form"}) do |f| %>
+<%= bootstrap_form_for(@order, label_errors: true, :html => {class: "form-horizontal"}) do |f| %>
     <div class="container-fluid col-md-6 col-md-offset-3 col-xs-6 col-xs-offset-3">
-      <%= f.text_field :name %>
-      <%= f.text_field :surname %>
-      <%= f.number_field :tz %>
-      <%= f.phone_field :phone %>
-      <%= f.submit "Create order", class: "btn btn-success col-md-offset-4 col-xs-6 col-xs-offset-3" %>
+      <%= f.text_field :name, label: "Client Name: " %>
+      <%= f.text_field :surname, label: "Client Surname: " %>
+      <%= f.number_field :tz, label: "Teudat zeut: " %>
+      <%= f.phone_field :phone, label: "Contact phone:" %>
+      <%= f.submit class: "btn btn-success col-md-offset-3 col-xs-6 col-xs-offset-3" %>
     </div>
 <% end %>
 

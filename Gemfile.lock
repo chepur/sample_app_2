@@ -190,6 +190,7 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   sdoc (~> 0.4.1)
   selenium-webdriver (= 2.53.0)
+  sprockets (= 3.6.0)
   sqlite3
   turbolinks (= 2.5.3)
   uglifier (= 3.0.0)
