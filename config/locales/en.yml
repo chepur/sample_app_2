@@ -21,3 +21,9 @@
 
 en:
   hello: "Hello world"
+
+  activerecord:
+      attributes:
+        order:
+          tz: "Teudat Zehut"
+
