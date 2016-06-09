@@ -1,11 +1,13 @@
 <% provide(:title, 'Home') %>
 <div class="center hero-unit">
   <h1>Campama CRM</h1>
+  <div class="jumbotron">
+    <h2>
+      This is the home page for the Campama CRM
+    </h2>
 
-  <h2>
-    This is the home page for the Campama CRM
-  </h2>
-
-  <%= link_to "Sign up now!", '#', class: "btn btn-large btn-primary" %>
+    <%= link_to "Open all orders", orders_path, class: "btn btn-large btn-success" %>
+    <%= link_to "Sign up now!", '#', class: "btn btn-large btn-primary" %>
+  </div>
 </div>
 

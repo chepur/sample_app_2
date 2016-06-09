@@ -2,6 +2,7 @@ class OrdersController < ApplicationController
 
   def index
     @orders = Order.all
+    @orders = Order.all.order('created_at DESC').paginate(page: params[:page], per_page: 20)
   end
 
   def show

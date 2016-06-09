@@ -2,7 +2,7 @@
 
 <div class="row">
   <div class="container-fluid">
-      <p><%= link_to 'Add order', new_order_path, class: "btn btn-primary", role: "button" %></p>
+    <p><%= link_to 'Add order', new_order_path, class: "btn btn-primary", role: "button" %></p>
   </div>
 </div>
 
@@ -26,5 +26,8 @@
           </tr>
       <% end %>
     </table>
+    <div align="center">
+      <%= will_paginate @orders %>
+    </div>
   </div>
 </div>
