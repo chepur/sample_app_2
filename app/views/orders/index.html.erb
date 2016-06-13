@@ -11,18 +11,18 @@
 
     <table class="table table-striped table-bordered table-hover orders-table">
       <tr>
-        <th>Name</th>
-        <th>Surname</th>
+        <th>Full Name</th>
         <th>Teudat Zehud</th>
-        <th>phone</th>
+        <th>Contact phone</th>
+        <th>Total sim card(-s):</th>
       </tr>
 
       <% @orders.each do |order| %>
           <tr data-href=<%= order_path(order) %> data-toggle="tooltip" title="Show order!">
-            <td><%= order.name %></td>
-            <td><%= order.surname %></td>
+            <td><%= "#{order.name} #{order.surname}"%></td>
             <td><%= order.tz %></td>
             <td><%= order.phone %></td>
+            <td align="center"><strong><%= order.sim_cards.count.to_i %></strong></td>
           </tr>
       <% end %>
     </table>

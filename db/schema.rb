@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160607110155) do
+ActiveRecord::Schema.define(version: 20160613115942) do
 
   create_table "orders", force: :cascade do |t|
     t.string   "name"
@@ -21,5 +21,14 @@ ActiveRecord::Schema.define(version: 20160607110155) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "sim_cards", force: :cascade do |t|
+    t.integer  "order_id"
+    t.string   "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "sim_cards", ["order_id"], name: "index_sim_cards_on_order_id"
 
 end

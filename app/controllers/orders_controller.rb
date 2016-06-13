@@ -11,6 +11,7 @@ class OrdersController < ApplicationController
 
   def new
     @order = Order.new
+    @order.sim_cards.build
   end
 
   def edit
@@ -50,7 +51,7 @@ class OrdersController < ApplicationController
   private
 
   def order_params
-    params.require(:order).permit(:name, :surname, :tz, :phone)
+    params.require(:order).permit(:name, :surname, :tz, :phone, sim_cards_attributes: [:id, :title, :_destroy])
   end
 
 end
