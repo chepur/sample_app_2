@@ -1,0 +1,7 @@
+<div class="nested-fields">
+  <%= ff.inputs do %>
+      <%= ff.input :title %>
+      <%= ff.input :done, as: :boolean %>
+      <%= link_to_remove_association "remove sim", f %>
+  <% end %>
+</div>

@@ -15,11 +15,13 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
+//= require cocoon
+//= require jquery_nested_form
 
 
 // hide flash message function:
 $(document).on('ready page:load', function () {
-    $(".alert" ).fadeOut(3000);
-    $(".alert-success" ).fadeOut(3000);
-    $(".alert-danger" ).fadeOut(3000);
+    $(".alert").fadeOut(3000);
+    $(".alert-success").fadeOut(3000);
+    $(".alert-danger").fadeOut(3000);
 });

@@ -1,19 +1,27 @@
-<%= bootstrap_form_for(@order, label_errors: true, :html => {id: "orderForm", class: "form-horizontal"}) do |f| %>
+<%= bootstrap_form_for @order do |f| %>
     <div class="container-fluid col-md-6 col-md-offset-3 col-xs-6 col-xs-offset-3">
       <%= f.text_field :name, label: "Client Name: " %>
       <%= f.text_field :surname, label: "Client Surname: " %>
       <%= f.number_field :tz, label: "Teudat zeut: " %>
       <%= f.phone_field :phone, label: "Contact phone:" %>
-      <p>Sim cards:</p>
-        <%= f.fields_for :sim_cards do |sim_cards_form| %>
-              <%= sim_cards_form.check_box :_destroy %>
-              <%= sim_cards_form.text_field :title %>
-        <% end %>
+
+      <p>Simcards: </p>
+      <%= f.fields_for :simcards do |simcard_form| %>
+
+          <li>
+            <%= simcard_form.check_box :_destroy %>
+            <%= simcard_form.text_field :title %>
+          </li>
+
+      <% end %>
+
       <%= f.submit class: "btn btn-success col-md-offset-3 col-xs-6 col-xs-offset-3" %>
+
+
     </div>
+
 <% end %>
 
 <div class="col-md-6 col-md-offset-1 col-xs-6 col-xs-offset-1">
   <p><%= link_to '< Back to orders', orders_path, class: "btn btn-link", role: "button" %></p>
 </div>
-

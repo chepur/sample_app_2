@@ -26,9 +26,9 @@
       <td class="col-sm-3"><%= @order.phone %></td>
     </tr>
     <tr>
-      <td class="col-sm-4" colspan="2">Total sim cards: <strong><%= @order.sim_cards.count %></strong></td>
+      <td class="col-sm-4" colspan="2">Total sim cards: <strong><%= @order.simcards.count %></strong></td>
     </tr>
-    <% @order.sim_cards.each do |sim| %>
+    <% @order.simcards.each do |sim| %>
         <tr>
           <td class="col-sm-3" colspan="2"><%= sim.title %></td>
         </tr>
