@@ -15,6 +15,9 @@
 /log/*
 !/log/.keep
 /tmp
+vendor/bundle/*
+vendor/cache/*
+vendor/plugins/*
 /.idea
 database.yml
 doc/
