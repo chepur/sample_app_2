@@ -7,8 +7,7 @@ gem 'will_paginate', '3.1.0'
 gem 'bootstrap-will_paginate', '0.0.10'
 gem 'bootstrap_form', '2.3.0'
 gem 'sprockets', '3.6.0'
-gem 'cocoon', '1.2.9'
-gem 'nested_form'
+gem 'nested_form_fields'
 
 
 group :development, :test do

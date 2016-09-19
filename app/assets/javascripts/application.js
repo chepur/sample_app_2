@@ -15,8 +15,7 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
-//= require cocoon
-//= require jquery_nested_form
+//= require nested_form_fields
 
 
 // hide flash message function:

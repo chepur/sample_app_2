@@ -1,2 +1,0 @@
-class SimCardsController < ApplicationController
-end

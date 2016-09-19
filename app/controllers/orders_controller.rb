@@ -11,7 +11,7 @@ class OrdersController < ApplicationController
 
   def new
     @order = Order.new
-    2.times { @order.simcards.build }
+    @order.simcards.build
   end
 
   def edit
