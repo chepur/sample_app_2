@@ -94,10 +94,7 @@ GEM
     mini_portile2 (2.1.0)
     minitest (5.9.0)
     multi_json (1.12.1)
-    nested_form_fields (0.7.8)
-      coffee-rails (>= 3.2.1)
-      jquery-rails
-      rails (>= 3.2.0)
+    nested_form (0.3.2)
     nokogiri (1.6.8)
       mini_portile2 (~> 2.1.0)
       pkg-config (~> 1.1.7)
@@ -179,7 +176,7 @@ PLATFORMS
 DEPENDENCIES
   bootstrap-sass (= 3.3.6)
   bootstrap-will_paginate (= 0.0.10)
-  bootstrap_form (= 2.3.0)
+  bootstrap_form
   childprocess (= 0.5.9)
   coffee-rails (= 4.1.1)
   database_cleaner!
@@ -188,7 +185,7 @@ DEPENDENCIES
   jbuilder (= 2.5.0)
   jquery-rails (= 4.1.1)
   libnotify (= 0.7.3)
-  nested_form_fields
+  nested_form
   pg (= 0.18.4)
   rails (= 4.2.5)
   rails_12factor (= 0.0.3)

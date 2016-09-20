@@ -14,3 +14,17 @@
  *= require_self
  *= require rails_bootstrap_forms
  */
+
+
+
+/*.simcard_field{*/
+  /*position: relative;*/
+/*}*/
+/*.simcard_field input{*/
+    /*width: 420px;*/
+/*}*/
+/*.remove_field{*/
+    /*position: absolute;*/
+    /*left: 655px;*/
+    /*top: 9px;*/
+/*}*/

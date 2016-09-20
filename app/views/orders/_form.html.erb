@@ -1,37 +1,25 @@
-<%= form_for(@order) do |f| %>
-    <div class="field">
-      <ul>
-        <li>
-          <%= f.label :Name %>
-          <%= f.text_field :name %>
-        </li>
-        <li>
-          <%= f.label :Surname %>
-          <%= f.text_field :surname %>
-        </li>
-        <li>
-          <%= f.label :Teudat %>
-          <%= f.number_field :tz %>
-        </li>
-        <li>
-          <%= f.label :Phone %>
-          <%= f.phone_field :phone %>
-        </li>
-      </ul>
-    </div>
-    <%= submit_tag "Add simcard", type: 'button', id: 'addSimcard', onclick: 'addSimcardField()' %>
+<%= nested_form_for(@order) do |f| %>
+    <%= f.text_field :name, label: "Name:" %>
+    <%= f.text_field :surname, label: "Surname:" %>
+    <%= f.number_field :tz, label: "Teudat zeut:" %>
+    <%= f.phone_field :phone, label: "Phone:" %>
 
-    <div id="simcardHeader" style="display:none">Simcard information:</div>
+    <h2 align="center">Simcard(-s):</h2>
+
+    <%= f.fields_for :simcards %>
+    <%= f.link_to_add("Add simcard", :simcards) %>
 
 
-    <ul id="myList">
-    </ul>
-    <div class="actions">
-      <%= f.submit "Create Order" %>
-    </div>
 
+
+
+
+    <!%= f.submit(class: "btn btn-primary") %>
 <% end %>
 
-<div class="col-md-6 col-md-offset-1 col-xs-6 col-xs-offset-1">
-  <p><%= link_to '< Back to orders', orders_path, class: "btn btn-link", role: "button" %></p>
-</div>
+
+
+
+<!--<div class="col-md-6 col-md-offset-1 col-xs-6 col-xs-offset-1">-->
+  <!--<p><!%= link_to '< Back to orders', orders_path, class: "btn btn-link", role: "button" %></p>-->
+<!--</div>-->
