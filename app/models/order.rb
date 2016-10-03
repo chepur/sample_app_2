@@ -3,6 +3,6 @@ class Order < ActiveRecord::Base
   accepts_nested_attributes_for :simcards, allow_destroy: true
   validates :name, length: {minimum: 4, maximum: 30}
   validates :surname, length: {minimum: 4, maximum: 30}
-  validates :tz, length: {minimum: 4, maximum: 30}
-  validates :phone, length: {minimum: 3, maximum: 15}
+  validates :tz, length: {is: 9}
+  validates :phone, length: {minimum: 5, maximum: 12}
 end

@@ -1,0 +1,16 @@
+<div class="row col-md-6 col-md-offset-3">
+  <%= bootstrap_form_for(@sim_type) do |f| %>
+      <%= f.text_field :kind, label: "Kind:" %>
+      <%= f.text_field :tariff, label: "Tariff:" %>
+      <div class="st_checkbox">
+        <%= f.check_box :active, label: "Is Active" %>
+      </div>
+      <div class="row col-md-offset-4">
+        <%= f.submit class: "btn btn-primary" %>
+      </div>
+  <% end %>
+</div>
+
+<div class="col-md-6 col-md-offset-1">
+  <p><%= link_to '< Back', sim_types_path, class: "btn btn-link", role: "button" %></p>
+</div>

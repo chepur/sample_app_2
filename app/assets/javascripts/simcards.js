@@ -1,6 +1,6 @@
 $(document).on('ready page:load', function () {
 
-    //function for handling nested simcard fields on order form
+    //function 'simcardsDisp' for handling nested simcard fields on order form
     var simcardsDisp = function () {
         if ($('.simcard_field .fields:not([style*="display: none"])').length == 1) {
             $('.simcard_field .fields .form-group').css('width', '100%');
@@ -16,6 +16,7 @@ $(document).on('ready page:load', function () {
     $(document).on('nested:fieldAdded', function (event) {
         simcardsDisp();
     });
+
     $(document).on('nested:fieldRemoved', function (event) {
         simcardsDisp();
     });

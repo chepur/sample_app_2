@@ -1,0 +1,42 @@
+<h1>Show sim type</h1>
+
+<div class="container-fluid">
+  <table class="table table-bordered table-striped">
+    <tbody>
+    <tr>
+      <td><strong>Type:</strong></td>
+      <td><%= @sim_type.kind %></td>
+    </tr>
+
+    <tr>
+      <td class="col-sm-1"><strong>Tariff:</strong></td>
+      <td class="col-sm-3"><%= @sim_type.tariff %></td>
+    </tr>
+
+    <tr>
+      <td class="col-sm-1"><strong>State:</strong></td>
+      <td class="col-sm-3"><%= @sim_type.active %></td>
+    </tr>
+    </tbody>
+  </table>
+
+  <div class="row">
+    <div class="col-md-12 ">
+      <p>
+        <%= link_to 'Edit', edit_sim_type_path, class: "btn btn-primary", role: "button" %>
+        <%= link_to 'Delete', sim_type_path(@sim_type), method: :delete,
+                    data: {confirm: 'Are you sure?'}, class: "btn btn-danger", role: "button" %>
+      </p>
+    </div>
+    <div class="col-md-2 ">
+      <p><%= link_to '< Back', sim_types_path, class: "btn btn-link", role: "button" %></p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
