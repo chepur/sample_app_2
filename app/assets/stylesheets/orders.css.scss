@@ -1,3 +1,16 @@
-// Place all the styles related to the orders controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.simcard_field div .form-group {
+  width: 95%;
+  float: left;
+}
+
+
+.simcard_field .icon-remove {
+  width: 4%;
+  float: left;
+  position: relative;
+  top: 35px;
+  left: 5px;
+  color: red;
+  text-decoration: none;
+}
