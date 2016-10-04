@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161003133346) do
+ActiveRecord::Schema.define(version: 20161004101949) do
 
   create_table "orders", force: :cascade do |t|
     t.string   "name"
@@ -22,18 +22,21 @@ ActiveRecord::Schema.define(version: 20161003133346) do
     t.datetime "updated_at",           null: false
   end
 
-  create_table "sim_cards", force: :cascade do |t|
-    t.integer  "order_id"
-    t.string   "title"
+  create_table "sim_tarifs", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  add_index "sim_cards", ["order_id"], name: "index_sim_cards_on_order_id"
+  create_table "sim_tatifs", force: :cascade do |t|
+    t.string   "tar_name"
+    t.boolean  "active",     default: false
+    t.boolean  "boolean",    default: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+  end
 
   create_table "sim_types", force: :cascade do |t|
     t.string   "kind"
-    t.string   "tariff"
     t.boolean  "active",     default: false
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false

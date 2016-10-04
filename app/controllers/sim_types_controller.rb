@@ -49,6 +49,6 @@ class SimTypesController < ApplicationController
   private
 
   def sim_type_params
-    params.require(:sim_type).permit(:kind, :tariff, :active)
+    params.require(:sim_type).permit(:kind, :active)
   end
 end
