@@ -13,7 +13,7 @@
           </tr>
 
           <% @sim_types.each do |st| %>
-              <tr data-href=<%= edit_sim_type_path(st) %> data-toggle="tooltip" title="Edit">
+              <tr data-href=<%= sim_type_path(st) %> data-toggle="tooltip" title="Show">
                 <td><%= st.kind %></td>
                 <td><%= st.active? %></td>
                 </td>

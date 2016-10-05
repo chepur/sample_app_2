@@ -1,34 +1,34 @@
-<h1>Show sim type</h1>
+<h1>Show sim tariff</h1>
 
 <div class="container-fluid">
   <div class="col-md-6 col-md-offset-3 ">
     <table class="table table-bordered table-striped">
       <tbody>
       <tr>
-        <td><strong>Type:</strong></td>
-        <td><%= @sim_type.kind %></td>
+        <td><strong>Tariff:</strong></td>
+        <td><%= @sim_tariff.tariff %></td>
       </tr>
       <tr>
         <td class="col-sm-1"><strong>State:</strong></td>
-        <td class="col-sm-3"><%= @sim_type.active %></td>
+        <td class="col-sm-3"><%= @sim_tariff.active %></td>
       </tr>
       </tbody>
     </table>
-
     <div class="row">
       <div class="col-md-12 ">
         <p>
-          <%= link_to 'Edit', edit_sim_type_path, class: "btn btn-primary", role: "button" %>
-          <%= link_to 'Delete', sim_type_path(@sim_type), method: :delete,
+          <%= link_to 'Edit', edit_sim_tariff_path, class: "btn btn-primary", role: "button" %>
+          <%= link_to 'Delete', sim_tariff_path(@sim_tariff), method: :delete,
                       data: {confirm: 'Are you sure?'}, class: "btn btn-danger", role: "button" %>
         </p>
       </div>
       <div class="col-md-2 ">
-        <p><%= link_to '< Back', sim_types_path, class: "btn btn-link", role: "button" %></p>
+        <p><%= link_to '< Back', sim_tariffs_path, class: "btn btn-link", role: "button" %></p>
       </div>
     </div>
   </div>
 </div>
+
 
 
 

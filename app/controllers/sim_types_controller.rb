@@ -20,7 +20,7 @@ class SimTypesController < ApplicationController
     @sim_type = SimType.new(sim_type_params)
     if @sim_type.save
       flash[:success] = "Sim type was created!"
-      redirect_to sim_type_path(@sim_type)
+      redirect_to sim_types_path
     else
       render 'new'
     end
@@ -30,7 +30,7 @@ class SimTypesController < ApplicationController
     @sim_type = SimType.find(params[:id])
 
     if @sim_type.update(sim_type_params)
-      redirect_to sim_type_path(@sim_type)
+      redirect_to sim_types_path
       flash[:success] = "Sim type was updated!"
     else
       render 'edit'
