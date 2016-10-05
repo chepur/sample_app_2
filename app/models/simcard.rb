@@ -1,4 +1,5 @@
 class Simcard < ActiveRecord::Base
   belongs_to :order
-  validates :title, presence: true, length: {minimum: 3, maximum: 25}
+  validates :sim_type, presence: true
+  validates :tariff, presence: true
 end

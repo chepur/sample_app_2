@@ -1,4 +1,10 @@
-<%= f.text_field :title, label: "Title:" %>
-<%= f.link_to_remove "", class: "glyphicon glyphicon-remove icon-remove" %>
+<div class="single-sim clearfix">
+  <%= f.select('sim_type', SimType.all.collect { |t| [t.kind, t.kind] }, {include_blank: 'None'}) %>
+  <%= f.select('tariff', SimTariff.all.collect { |t| [t.tariff, t.tariff] }, {include_blank: 'None'}) %>
+  <%= f.link_to_remove "", class: "glyphicon glyphicon-remove icon-remove" %>
+</div>
+
+
+
 
 

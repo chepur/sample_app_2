@@ -49,6 +49,7 @@ textarea {
 .table th {
   text-align: center;
 }
+
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
@@ -153,9 +154,35 @@ p {
   margin-left: 3px;
 }
 
-
 .form-bg {
   background: #e6e6e6;
   padding: 20px;
   border-radius: 1%;
 }
+
+.simcard_field div .form-group {
+  width: 95%;
+  float: left;
+}
+
+.simcard_field .icon-remove {
+  width: 4%;
+  float: left;
+  position: relative;
+  top: -10px;
+  left: 5px;
+  color: #39a8ff;
+  text-decoration: none;
+}
+
+.single-sim {
+  background: whitesmoke;
+  border-radius: 1%;
+  margin: 5px 0px;
+  padding: 5px;
+}
+
+.new-order-btn {
+  margin-top: 10px;
+}
+

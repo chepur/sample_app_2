@@ -51,7 +51,7 @@ class OrdersController < ApplicationController
   private
 
   def order_params
-    params.require(:order).permit(:name, :surname, :tz, :phone, simcards_attributes: [:id, :title, :_destroy])
+    params.require(:order).permit(:name, :surname, :tz, :phone, simcards_attributes: [:id, :sim_type, :tariff, :_destroy])
   end
 
 end
