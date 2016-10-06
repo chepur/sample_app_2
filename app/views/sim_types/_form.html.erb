@@ -1,6 +1,6 @@
 <div class="row col-md-6 col-md-offset-3">
   <div class="form-bg">
-    <%= bootstrap_form_for(@sim_type) do |f| %>
+    <%= bootstrap_form_for(@sim_type, label_errors: true) do |f| %>
         <%= f.text_field :kind, label: "Kind:" %>
         <div class="st_checkbox">
           <%= f.check_box :active, label: "Is Active" %>

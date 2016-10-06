@@ -28,10 +28,14 @@
     <tr>
       <td class="col-sm-4" colspan="2">Total sim cards: <strong><%= @order.simcards.count %></strong></td>
     </tr>
+    <tr>
+      <td class="col-sm-1"><strong>Simcard Type: </strong></td>
+      <td class="col-sm-3"><strong>Simcard Tariff:</strong></td>
+    </tr>
     <% @order.simcards.each do |sim| %>
         <tr colspan="2">
-          <td class="col-sm-1"><strong>Type: </strong><%= sim.sim_type %> </td>
-          <td class="col-sm-2"><strong>Tariff:</strong> <%= sim.tariff %></td>
+          <td class="col-sm-1"><%= sim.sim_type %> </td>
+          <td class="col-sm-2"> <%= sim.tariff %></td>
         </tr>
     <% end %>
     </tbody>
