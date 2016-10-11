@@ -1,10 +1,10 @@
 <div class="row col-md-6 col-md-offset-3">
   <%= bootstrap_nested_form_for(@order, label_errors: true) do |f| %>
       <div class="form-bg">
-        <%= f.text_field :name, label: "Name:", icon: "user" %>
-        <%= f.text_field :surname, label: "Surname:", icon: "user" %>
-        <%= f.text_field :tz, label: "Teudat zeut:", icon: "pencil" %>
-        <%= f.phone_field :phone, label: "Phone:", icon: "phone-alt" %>
+        <%= f.text_field :name, label: "Name:" %>
+        <%= f.text_field :surname, label: "Surname:" %>
+        <%= f.text_field :tz, label: "Teudat zeut:" %>
+        <%= f.phone_field :phone, label: "Phone:" %>
 
         <h2 align="center">Simcard(-s):</h2>
         <div class="simcard_field clearfix">
