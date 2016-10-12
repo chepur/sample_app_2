@@ -5,10 +5,11 @@ gem 'bootstrap-sass', '3.3.6'
 gem 'faker', '1.6.3'
 gem 'will_paginate', '3.1.0'
 gem 'bootstrap-will_paginate', '0.0.10'
-gem 'bootstrap_form'
+# gem 'bootstrap_form'
 gem 'sprockets', '3.6.0'
-gem "nested_form"
-
+# gem "nested_form"
+gem 'simple_form'
+gem "cocoon"
 
 group :development, :test do
   gem 'sqlite3'
