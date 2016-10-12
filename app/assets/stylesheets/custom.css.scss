@@ -184,3 +184,22 @@ p {
 .new-order-btn {
   margin-top: 10px;
 }
+
+//id='order_simcards_attributes_([0-9]+)\_tariff' {
+
+//.single-sim select {
+//  border: 1px solid green;
+//}
+//
+//.single-sim .has-error select {
+//  border: 1px solid darkred;
+//}
+
+//without error
+//<div class="form-group" style="width: 100%;">
+//<label class="control-label required" for="order_simcards_attributes_0_sim_type">Sim type</label>
+
+//with error
+//<div class="form-group has-error" style="width: 100%;">
+//<label class="control-label required" for="order_simcards_attributes_1_sim_type">Sim type can't be blank</label>
+
