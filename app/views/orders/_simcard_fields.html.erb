@@ -1,5 +1,7 @@
 <div class="nested-fields">
-  <%= f.input :tariff, collection: SimType.active.all.collect { |t| [t.kind, t.kind] }, include_blank: 'None' %>
-  <%= f.input :sim_type, collection: SimTariff.active.all.collect { |t| [t.tariff, t.tariff] }, include_blank: 'None' %>
-  <%= link_to_remove_association "Remove sim", f %>
+  <%= f.input :tariff, collection: SimType.active.all.collect { |t| [t.kind, t.kind] },
+              include_blank: 'None', label: 'Tatiff: ' %>
+  <%= f.input :sim_type, collection: SimTariff.active.all.collect { |t| [t.tariff, t.tariff] },
+              include_blank: 'None', label: 'Type: ' %>
+  <%= link_to_remove_association "Remove", f, class: 'btn btn-danger btn-xs' %>
 </div>

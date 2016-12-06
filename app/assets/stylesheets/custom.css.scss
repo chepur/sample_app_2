@@ -14,6 +14,7 @@ html {
 
 body {
   padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 section {
@@ -187,19 +188,13 @@ p {
 
 //id='order_simcards_attributes_([0-9]+)\_tariff' {
 
-//.single-sim select {
-//  border: 1px solid green;
-//}
+.order_simcards_tariff {
+  border: 1px solid green;
+  margin: 5px 0 5px 0;
+}
+
 //
 //.single-sim .has-error select {
 //  border: 1px solid darkred;
 //}
-
-//without error
-//<div class="form-group" style="width: 100%;">
-//<label class="control-label required" for="order_simcards_attributes_0_sim_type">Sim type</label>
-
-//with error
-//<div class="form-group has-error" style="width: 100%;">
-//<label class="control-label required" for="order_simcards_attributes_1_sim_type">Sim type can't be blank</label>
 

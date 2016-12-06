@@ -1,20 +1,20 @@
-<%= simple_form_for @order do |f| %>
-    <%= f.input :name %>
-    <%= f.input :surname %>
-    <%= f.input :tz, as: :string, input_html: {maxlength: 9} %>
-    <%= f.input :phone, as: :tel %>
+<div class="col-md-6 col-md-offset-3">
+  <%= simple_form_for @order do |f| %>
+      <%= f.input :name, label: 'Name:' %>
+      <%= f.input :surname, label: 'Surname:' %>
+      <%= f.input :tz, label: 'Teudat zehut number:', input_html: {maxlength: 9} %>
+      <%= f.input :phone, label: "Contact phone: ", as: :tel %>
 
-    <h3 align="center">Simcard(-s):</h3>
+      <h3 align="center">Simcard(-s):</h3>
 
-    <div id="simcards">
-      <%= f.simple_fields_for :simcards do |sim| %>
-          <%= render 'simcard_fields', f: sim %>
-      <% end %>
-      <div class="links">
-        <%= link_to_add_association 'Add sim', f, :simcards %>
+      <div id="simcards">
+        <%= f.simple_fields_for :simcards do |sim| %>
+            <%= render 'simcard_fields', f: sim %>
+        <% end %>
+          <%= link_to_add_association 'Add sim ', f, :simcards, class:'btn btn-primary btn-xs' %>
       </div>
-    </div>
-    <%= f.button :submit %>
-<% end %>
+      <%= f.button :submit, class: "btn btn-success center-block" %>
+  <% end %>
+</div>
 
 
